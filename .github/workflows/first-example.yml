@@ -8,12 +8,19 @@ jobs:
         steps:
         - name: Checkout Repo
           uses: actions/checkout@v5
+
+        - name: List and Read files
+          run: |
+             echo "My first Github Acitons Job"
+             ls -ltra
+             cat README.md
+
+        - name: Generate ASCII Artwork
+          run: cowsay -f dragon "Run for cover, I am a DRAGON, ....RAWR" >> dragon.txt
           
-        - name: Welcome message
-          run: echo "My first Github Acitons Job"
 
-        - name: List Files
-          run: ls
+        #- name: List Files
+         # run: ls
 
-        - name: Read File
-          run: cat README.md
+        #- name: Read File
+         # run: cat README.md
